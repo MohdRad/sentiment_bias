@@ -39,7 +39,7 @@ The 100 simple energy prompts are located in ```./prompts```. To get the energy 
 ```bash 
 python run_bias.py
 ```
-The numbers of instances are written in './Results/' for models fine-tuned on the general tweets (```./general_instaces.csv```) and nuclear tweets (```./nuclear_instances.csv```). The instances for each model are written in separate directories in ```./Results/kumo24```. 
+The numbers of instances are written in ```./Results/``` for models fine-tuned on the general tweets (```./general_instaces.csv```) and nuclear tweets (```./nuclear_instances.csv```). The instances for each model are written in separate directories in ```./Results/kumo24```. 
 # Using SHAP
 To use SHAP on BERT fine-tuned on general tweets run: 
 
