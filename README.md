@@ -15,7 +15,7 @@ Fine-tuning of the models using 4,000 general tweets (```./data/zero-shot.csv```
 ```bash 
 python run_fine_tuning.py
 ```
-The models fine-tuned using 80\% of this Kaggle dataset (```./data/train_gen.csv```) are availabel on my [page](https://huggingface.co/kumo24) on huggingface. 
+The models fine-tuned using 80\% of this Kaggle dataset (```./data/train_gen.csv```) are availabel on my [page](https://huggingface.co/kumo24) on huggingface. An example, the fine-tuned BERT models has the checkpoint ```kumo24/bert-sentiment```. Additionally, models fine-tuned using nuclear energy tweets are also available, e.g., BERT model has a checkpoint ```kumo24/bert-sentiment-nuclear```.  
 
 To test the fine-tuned models on 3,000 samples (```./data/sample.csv```), use 
 
