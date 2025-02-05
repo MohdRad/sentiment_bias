@@ -54,3 +54,7 @@ If you try to run the codes from clusters you may get errors when you try to imp
 os.environ['CURL_CA_BUNDLE'] = ''
 os.environ['REQUESTS_CA_BUNDLE'] = ''
 ```
+These two lines are in the files in ```./src/```, you can uncomment them. I also needed at some point to use the following linux command to avoid importing error: 
+```bash
+$ export HF_ENDPOINT=https://hf-mirror.com
+```
