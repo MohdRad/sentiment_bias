@@ -31,3 +31,7 @@ from huggingface_hub import login
 login(token='YOUR TOKEN')
 ```
 These two lines are lines 21 and 22 in ``` ./src/fine_tuning.py```, you can uncomment them and use your token. For testing, use the directory of your fine-tuned model as a checkpoint. 
+
+# Bias Instances
+
+# Using SHAP
