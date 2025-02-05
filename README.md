@@ -45,4 +45,4 @@ To use SHAP on BERT fine-tuned on general tweets run:
 ```bash 
 python run_shap.py
 ```
-The instances for all cases considered in our paper are in excel sheet located at ```./shap/Supplementary_Material.xlsx```.
+SHAP bar plots are written to ```./SHAP/kumo24/bert-sentiment/```. The instances for all cases considered in our paper are in excel sheet located at ```./SHAP/Supplementary_Material.xlsx```. 
