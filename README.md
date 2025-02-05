@@ -47,3 +47,10 @@ To use SHAP on BERT fine-tuned on general tweets run:
 python run_shap.py
 ```
 SHAP bar plots are written to ```./SHAP/kumo24/bert-sentiment/```. The instances for all cases considered in our paper are in an Excel sheet located at ```./SHAP/Supplementary_Material.xlsx```. 
+
+# Notes for Error Handling
+If you try to run the codes from clusters you may get errors when you try to import models from huggingface, and you need to define environment variables. I could handle some of errors using the following: 
+```bash
+os.environ['CURL_CA_BUNDLE'] = ''
+os.environ['REQUESTS_CA_BUNDLE'] = ''
+```
