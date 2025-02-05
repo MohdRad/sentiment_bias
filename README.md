@@ -22,7 +22,7 @@ To test the fine-tuned models on 3,000 samples (```./data/sample.csv```), use
 ```bash 
 python run_testing.py
 ```
-The classification accuracy is 98\%. You can also test the models using 20\% of the [dataset](https://www.kaggle.com/datasets/daniel09817/twitter-sentiment-analysis) (```./data/test_gen.csv```) but the classification accuracy will also be 98\%. The classification report is written to ```.csv``` file. Both ```run_fine_tuning.py``` & ```run_testing.py``` have comments that describe each input parameter. 
+The classification accuracy is 98\%. You can also test the models using 20\% of the [dataset](https://www.kaggle.com/datasets/daniel09817/twitter-sentiment-analysis) (```./data/test_gen.csv```) but the classification accuracy will also be 98\%. The classification report is written to ```.csv``` file (e.g., ```bert_cr.csv```). Both ```run_fine_tuning.py``` & ```run_testing.py``` have comments that describe each input parameter. 
 
 The models used are: BERT, GPT-2, LLaMA-2-7B, Falcon-7B, and MistralAI-7B. The fine-tuned models with the highest classification accuracy are on my [page](https://huggingface.co/kumo24) on huggingface. **The model and the results for LLaMA-2 are excluded because of the restrictions on its use.** For LLaMA-2 fine-tuning, you must have a huggingface accout, and you need to grant an access from Meta, you will get it in few hours. If you want to import the model from huggingface, you need to generate a token from your account and use it by huggingface package (```huggingface_hub```). The lines of code below show how to do that in Python. If you want to avoid this last step, download the model and keep it locally on your machine after you get the permission to access the files.
 
