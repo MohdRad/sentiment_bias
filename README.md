@@ -51,10 +51,14 @@ SHAP bar plots are written to ```./SHAP/kumo24/bert-sentiment/```. The instances
 # Notes for Error Handling
 If you try to run the codes from clusters you may get errors when you try to import models from huggingface, and you need to define environment variables. I could handle some of errors using the following: 
 ```bash
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+os.environ["NCCL_P2P_DISABLE"]="1"
+os.environ["NCCL_IB_DISABLE"]="1"
 os.environ['CURL_CA_BUNDLE'] = ''
 os.environ['REQUESTS_CA_BUNDLE'] = ''
 ```
-These two lines are in the files in ```./src/```, you can uncomment them. I also needed at some point to use the following linux command to avoid importing error: 
+These lines are in the files in ```./src/```. Currently, the last two are comments, you can uncomment them if you needed to. I also needed at some point to use the following linux command to avoid importing error: 
 ```bash
 $ export HF_ENDPOINT=https://hf-mirror.com
 ```
+Please notice that these errors are related to the computer you are using.  
