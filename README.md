@@ -9,6 +9,21 @@ print(torch.cuda.is_available())
 ```
 If this prints ```False```, you can download cuda from [Pytorch](https://pytorch.org/get-started/locally/) website.
 
+# Notes for Error Handling
+If you try to run the codes from clusters you may get errors when you try to import models from huggingface, and you need to define environment variables. I could handle some of errors using the following: 
+```bash
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
+os.environ["NCCL_P2P_DISABLE"]="1"
+os.environ["NCCL_IB_DISABLE"]="1"
+os.environ['CURL_CA_BUNDLE'] = ''
+os.environ['REQUESTS_CA_BUNDLE'] = ''
+```
+These lines are in the files in ```./src/```. Currently, the last two are comments, you can uncomment them if you needed to. I also needed at some point to use the following linux command to avoid importing error: 
+```bash
+$ export HF_ENDPOINT=https://hf-mirror.com
+```
+Please notice that these errors are related to the computer you are using.  
+
 # Fine-tuning and Testing
 Fine-tuning of the models using 4,000 general tweets (```./data/zero-shot.csv```) from this Kaggle [dataset](https://www.kaggle.com/datasets/daniel09817/twitter-sentiment-analysis) can be done by running: 
 
@@ -47,18 +62,3 @@ To use SHAP on BERT fine-tuned on general tweets run:
 python run_shap.py
 ```
 SHAP bar plots are written to ```./SHAP/kumo24/bert-sentiment/```. The instances for all cases considered in our paper are in an Excel sheet located at ```./SHAP/Supplementary_Material.xlsx```. 
-
-# Notes for Error Handling
-If you try to run the codes from clusters you may get errors when you try to import models from huggingface, and you need to define environment variables. I could handle some of errors using the following: 
-```bash
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
-os.environ["NCCL_P2P_DISABLE"]="1"
-os.environ["NCCL_IB_DISABLE"]="1"
-os.environ['CURL_CA_BUNDLE'] = ''
-os.environ['REQUESTS_CA_BUNDLE'] = ''
-```
-These lines are in the files in ```./src/```. Currently, the last two are comments, you can uncomment them if you needed to. I also needed at some point to use the following linux command to avoid importing error: 
-```bash
-$ export HF_ENDPOINT=https://hf-mirror.com
-```
-Please notice that these errors are related to the computer you are using.  
