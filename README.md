@@ -1,8 +1,12 @@
 This repository has the files for a possible publication about social bias quantification in Large Language Models (LLMs). 
 
 # Installation 
-The best way to run the codes is using Anaconda. Create an Anaconda environment with Python 3.11 using ```conda create -n NAME python=3.11```, replace NAME with any name, then install the requirements using ```pip install -r requirments.txt```. Sufficient GPU memory is crucial for fine-tuning and testing. Check whether Nvidia-cuda was installed using 
-
+The best way to run the codes is using Anaconda. Create an Anaconda environment with Python 3.11 and install the required packages using:
+```bash  
+conda create -n NAME python=3.11
+pip install -r requirments.txt
+```
+Replace NAME in the first line with any name. Sufficient GPU memory is crucial for fine-tuning and testing. Check whether Nvidia-cuda was installed using 
 ```bash
 import torch
 print(torch.cuda.is_available())
