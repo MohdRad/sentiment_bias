@@ -22,7 +22,7 @@ os.environ["NCCL_IB_DISABLE"]="1"
 os.environ['CURL_CA_BUNDLE'] = ''
 os.environ['REQUESTS_CA_BUNDLE'] = ''
 ```
-These lines are in the files in ```./src/```. Currently, the last two are comments, you can uncomment them if you needed to. I also needed at some point to use the following linux command to avoid importing error: 
+These lines are in the files in ```./src/```. Currently, the last two are comments, you can uncomment them if you needed to. I also needed at some point to use the following linux command to avoid an importing error: 
 ```bash
 $ export HF_ENDPOINT=https://hf-mirror.com
 ```
