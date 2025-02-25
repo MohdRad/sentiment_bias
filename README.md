@@ -26,7 +26,7 @@ These lines are in the files in ```./src/```. Currently, the last two are commen
 ```bash
 $ export HF_ENDPOINT=https://hf-mirror.com
 ```
-Please notice that these errors are related to the computer you are using. The codes will most likely work on personal computers but not clusters, which have additional security protocols for imports.  
+Please notice that these errors are related to the computer you are using and the model you are importing. The codes will most likely work on personal computers but not clusters, which have additional security protocols for imports.  
 
 # Fine-tuning and Testing
 Fine-tuning of the models using 4,000 general tweets (```./data/zero-shot.csv```) from this Kaggle [dataset](https://www.kaggle.com/datasets/daniel09817/twitter-sentiment-analysis) can be done by running: 
